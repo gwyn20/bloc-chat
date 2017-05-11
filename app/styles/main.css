@@ -2,7 +2,7 @@ body {
     position: relative;
     font-family: 'helvetica';
     color: rgba(54,89,105,1);
-    background-color: rgba(182,198,205,1);
+    background-color: rgba(182,198,204,1);
     max-height: 100%;
 }
 
@@ -21,7 +21,7 @@ body {
 
 .sidebar h1 {
     padding-left: 20px;
-    color: rgba(182,198,205,1);
+    color: rgba(182,198,204,1);
 }
 
 .sidebar h3 {
