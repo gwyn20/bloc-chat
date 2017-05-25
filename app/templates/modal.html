@@ -1,7 +1,13 @@
 <div class='modal-title'>
     <h2> Create New Room</h2>
-    <p>Enter a room name</p>
+    <p>Enter a room name</p> 
 </div>
 
 <div class='modal-entry-box'>
+    <input type='text' name='room' ng-model='roomName'>
+</div>
+
+<div class='modal-buttons'>
+    <button class='modal-button-cancel' ng-click='modal.cancel()'>Cancel</button>
+    <button class='modal-button-create' ng-click='modal.create()'>Create Room</button>
 </div>
