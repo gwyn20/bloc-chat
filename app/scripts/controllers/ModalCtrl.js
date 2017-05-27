@@ -1,7 +1,7 @@
 (function() {
     function ModalCtrl($uibModalInstance, Room) {
         this.create = function() {
-            Room.add(this.roomName);
+            Room.add(this.room);
             $uibModalInstance.dismiss('cancel');
         };
         

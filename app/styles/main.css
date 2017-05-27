@@ -30,8 +30,31 @@ body {
 }
 
 .new-room-button {
-    float: right;
+    margin-left: 20px;
     background-color: rgba(255,255,255,1);
     height: 25px;
     width: 100px;
+    border-style: none;
+}
+
+.modal-title {
+    text-align: center;
+    color: rgba(44,45,46,1);
+}
+
+.modal-entry-box {
+    text-align: center;
+    background-color: rgba(44,45,46,1);
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: none;
+}
+
+.modal-buttons {
+    text-align: center;
+    background-color: rgba(44,45,46,1);
+    width: 100%;
+    padding-bottom: 10px;
+    border-style: none;
 }
