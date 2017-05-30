@@ -29,12 +29,22 @@ body {
     color: rgba(159,161,162,1);
 }
 
+.list-of-rooms {
+    cursor: pointer;
+}
+
 .new-room-button {
     margin-left: 20px;
     background-color: rgba(255,255,255,1);
     height: 25px;
     width: 100px;
     border-style: none;
+}
+
+.main-window {
+    position: relative;
+    margin-left: 20px;  
+    padding-left: 20px;    
 }
 
 .modal-title {

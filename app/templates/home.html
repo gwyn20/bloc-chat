@@ -2,12 +2,21 @@
     <h1>Bloc Chat</h1> 
     
     <button class='new-room-button' ng-click='home.modal()'>New Room</button>
-        
-        
-        
-        <div class='list-of-rooms' ng-repeat='room in home.rooms'>  
+        <div class='list-of-rooms' ng-repeat='room in home.rooms' ng-click='home.currentRoom(room)'>  
             <h3>{{ room.$value }}</h3>
         </div>
     
 </div> 
 
+<div class='main-window'>
+            <div class='current-chat-room'>
+                <h1>{{ home.currentChatRoom }}</h1>
+            </div>
+            <div class='chat-room-messages'>
+                <div ng-repeat='message in home.messages'>
+                    <h4> {{ message.username }} </h4>
+                    <p> {{ message.content }} </p>
+                    <p> {{ message.sentAt }} </p>
+                </div>
+            </div>
+        </div>

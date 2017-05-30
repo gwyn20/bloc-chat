@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl(Room, $uibModal) {
+    function HomeCtrl(Room, $uibModal, Message) {
         this.rooms = Room.all;
         
         this.modal = function() {
@@ -10,11 +10,17 @@
                 size: 'sm'
             });
         };
+        
+        this.currentRoom = function(room) {
+            console.log(room.$id);
+            this.currentChatRoom = room.$value;
+            this.messages = Message.getByRoomId(room.$id);
+        };
     };
     
     
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', '$uibModal', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$uibModal', 'Message', HomeCtrl]);
 })();
