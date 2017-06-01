@@ -41,10 +41,14 @@ body {
     border-style: none;
 }
 
-.main-window {
-    position: relative;
-    margin-left: 20px;  
-    padding-left: 20px;    
+.main-window {  
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+.chat-room-messages {
+    padding-top: 40px;
 }
 
 .modal-title {
@@ -67,4 +71,16 @@ body {
     width: 100%;
     padding-bottom: 10px;
     border-style: none;
+}
+
+.chatOdd {
+    background-color: rgba(233,233,233,1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
+.chatEven {
+    padding-left: 10px;
+    
 }

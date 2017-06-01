@@ -13,10 +13,10 @@
                 <h1>{{ home.currentChatRoom }}</h1>
             </div>
             <div class='chat-room-messages'>
-                <div ng-repeat='message in home.messages'>
+                <div ng-repeat='message in home.messages' ng-class-odd="'chatOdd'" ng-class-even="'chatEven'">
                     <h4> {{ message.username }} </h4>
                     <p> {{ message.content }} </p>
-                    <p> {{ message.sentAt }} </p>
+                    <p style="font-size:10px;"> {{ message.sentAt }} </p>
                 </div>
             </div>
         </div>
