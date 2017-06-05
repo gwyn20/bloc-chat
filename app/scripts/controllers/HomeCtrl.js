@@ -12,7 +12,6 @@
         };
         
         this.currentRoom = function(room) {
-            console.log(room.$id);
             this.currentChatRoom = room.$value;
             this.messages = Message.getByRoomId(room.$id);
         };
