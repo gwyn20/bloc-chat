@@ -2,7 +2,7 @@
 
 <body ng-app="validationApp" ng-controller="UsernameModalCtrl">
     
-    <form name="usernameCreate" ng-submit="submitForm(usernameCreate.$valid)" novalidate>
+    <form name="usernameCreate" ng-submit="usernameModal.submitForm()">
 
         <div class='modal-title'>
             <label>
@@ -13,8 +13,7 @@
 
         <div class='modal-entry-box'>
             <input type='text' name='username' ng-model='usernameModal.username' ng-minlength='2' required>  
-            <p ng-show='usernameCreate.name.$invalid && !usernameCreate.name.$pristine' class='help-block'>Hey, we need you to enter a Username to get started</p>
-            <p ng-show='usernameCreate.username.$error.minlength' class='help-block'>Whoops, that Username is too short</p>
+            <p ng-show='usernameCreate.username.$error.minlength' class='help-block'>Keep Typing, that Username is too short</p>
         </div>
 
         <div class='modal-buttons'>

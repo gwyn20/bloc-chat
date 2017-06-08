@@ -7,7 +7,8 @@
             templateUrl: '/templates/usernameModal.html',
             controller: 'UsernameModalCtrl',
             controllerAs: 'usernameModal',
-            size: 'sm'
+            size: 'sm',
+            backdrop: 'static'
         });
     }
   }
