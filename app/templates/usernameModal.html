@@ -1,12 +1,27 @@
-<div class='modal-title'>
-    <h2>Set Your Username</h2>
-    <h4>Lets get started by choosing an awesome Username that will let people know you are a keyboard warrior (or maybe the 23rd person who likes cats e.g. catLover23)</h4> 
-</div>
+<html>
 
-<div class='modal-entry-box'>
-        <input type='text' name='username' ng-model='usernameModal.username'>
-</div>
+<body ng-app="validationApp" ng-controller="UsernameModalCtrl">
+    
+    <form name="usernameCreate" ng-submit="submitForm(usernameCreate.$valid)" novalidate>
 
-<div class='modal-buttons'>
-    <button class='modal-button-set' ng-click='usernameModal.setUser()'>I Have Chosen Wisely <br> Go Ahead And Set My Username</button>
-</div>
+        <div class='modal-title'>
+            <label>
+            <h2>Set Your Username</h2>
+            <h4>Lets get started by choosing an awesome Username that will let people know you are a keyboard warrior (or maybe the 23rd person who likes cats e.g. catLover23)</h4>
+            </label>
+        </div>
+
+        <div class='modal-entry-box'>
+            <input type='text' name='username' ng-model='usernameModal.username' ng-minlength='2' required>  
+            <p ng-show='usernameCreate.name.$invalid && !usernameCreate.name.$pristine' class='help-block'>Hey, we need you to enter a Username to get started</p>
+            <p ng-show='usernameCreate.username.$error.minlength' class='help-block'>Whoops, that Username is too short</p>
+        </div>
+
+        <div class='modal-buttons'>
+            <button type='submit' class='modal-button-set'>I Have Chosen Wisely <br> Go Ahead And Set My Username</button>
+        </div>
+ 
+    </form>
+
+</body>
+</html>

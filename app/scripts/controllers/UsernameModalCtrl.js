@@ -1,6 +1,8 @@
+var validationApp = angular.module('validationApp', []);
+
 (function() {
     function UsernameModalCtrl ($uibModalInstance, $cookies) {
-        this.setUser = function() {
+        this.submitForm = function(isValid) {
             $cookies.put('blocChatCurrentUser', this.username);
             $uibModalInstance.close();
         };
