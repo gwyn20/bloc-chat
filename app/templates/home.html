@@ -1,5 +1,6 @@
 <div class='sidebar'>
-    <h1>Bloc Chat</h1> 
+    <h1>Bloc Chat</h1>
+    <h4>Current User: {{ home.currentUser }} </h4>
     
     <button class='new-room-button' ng-click='home.modal()'>New Room</button>
         <div class='list-of-rooms' ng-repeat='room in home.rooms' ng-click='home.currentRoom(room)'>  
@@ -9,14 +10,21 @@
 </div> 
 
 <div class='main-window'>
-            <div class='current-chat-room'>
-                <h1>{{ home.currentChatRoom }}</h1>
-            </div>
-            <div class='chat-room-messages'>
-                <div ng-repeat='message in home.messages' ng-class-odd="'chatOdd'" ng-class-even="'chatEven'">
-                    <h4> {{ message.username }} </h4>
-                    <p> {{ message.content }} </p>
-                    <p style="font-size:10px;"> {{ message.sentAt }} </p>
-                </div>
-            </div>
+    <div class='current-chat-room'>
+        <h1>{{ home.currentChatRoom }}</h1>
+    </div>
+    
+    <div class='chat-room-messages'>
+        <div ng-repeat='message in home.messages' ng-class-odd="'chatOdd'" ng-class-even="'chatEven'">
+            <h4> {{ message.username }} </h4>
+            <p> {{ message.content }} </p>
+            <p style="font-size:10px;"> {{ message.sentAt }} </p>
         </div>
+    </div>
+</div>
+
+<div class='send-message'>
+    <textarea class="message-content" placeholder="Enter your awesome/witty message here..." name="message" ng-model="home.message" cols='30' rows='5'></textarea>
+    
+    <button class="send-message-button" ng-click="home.addMessage(); home.message = null">SEND</button>
+</div>

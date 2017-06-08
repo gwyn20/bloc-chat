@@ -1,8 +1,8 @@
 body {
     position: relative;
     font-family: 'helvetica';
-    color: rgba(44,45,46,1);
-    background-color: rgba(159,161,162,1);
+    color: rgba(45,45,45,1);
+    background-color: rgba(160,160,160,1);
     max-height: 100%;
 }
 
@@ -11,22 +11,27 @@ body {
     margin-top:0px;
     margin-bottom:0px;
     padding-bottom: 100%;
-    width: 300px;
+    width: 25%;
     height: 100%;
     border-style: none;
-    background-color: rgba(44,45,46,1);
+    background-color: rgba(45,45,45,1);
     z-index: 1;
     float: left;
 }
 
 .sidebar h1 {
     padding-left: 20px;
-    color: rgba(159,161,162,1);
+    color: rgba(160,160,160,1);
 }
 
 .sidebar h3 {
     padding-left: 20px;
-    color: rgba(159,161,162,1);
+    color: rgba(160,160,160,1);
+}
+
+.sidebar h4 {
+    padding-left: 20px;
+    color: rgba(160,160,160,1);
 }
 
 .list-of-rooms {
@@ -35,7 +40,7 @@ body {
 
 .new-room-button {
     margin-left: 20px;
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(233,233,233,1);
     height: 25px;
     width: 100px;
     border-style: none;
@@ -51,28 +56,6 @@ body {
     padding-top: 40px;
 }
 
-.modal-title {
-    text-align: center;
-    color: rgba(44,45,46,1);
-}
-
-.modal-entry-box {
-    text-align: center;
-    background-color: rgba(44,45,46,1);
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-style: none;
-}
-
-.modal-buttons {
-    text-align: center;
-    background-color: rgba(44,45,46,1);
-    width: 100%;
-    padding-bottom: 10px;
-    border-style: none;
-}
-
 .chatOdd {
     background-color: rgba(233,233,233,1);
     padding-top: 5px;
@@ -81,6 +64,61 @@ body {
 }
 
 .chatEven {
+    padding-left: 10px;    
+}
+
+.send-message {
+    bottom: 0;
     padding-left: 10px;
-    
+}
+
+.message-content {
+    background-color: rgba(233,233,233,1);
+    padding-left: 10px;
+    margin-left:  20px;
+    margin-right:  50px;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 60%;
+    position: fixed; 
+    bottom: 0;
+}
+
+.send-message-button {
+    background-color: rgba(45,45,45,1);
+    height: 50px;
+    min-width: 50px;
+    width: 10%;
+    bottom: 0;
+    text-align: center;
+    font-size: 100%;
+    color: rgba(160,160,160,1);
+    border-style: none;
+    right: 0;
+    position: fixed;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+
+.modal-title {
+    text-align: center;
+    color: rgba(45,45,45,1);
+}
+
+.modal-entry-box {
+    text-align: center;
+    background-color: rgba(45,45,45,1);
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: none;
+}
+
+.modal-buttons {
+    text-align: center;
+    background-color: rgba(45,45,45,1);
+    width: 100%;
+    padding-bottom: 10px;
+    border-style: none;
 }
